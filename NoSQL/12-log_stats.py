@@ -30,8 +30,14 @@ def log_stats():
     print(f"{total_logs} logs")
     print("Methods:")
     for method in methods:
-        print(f"\tmethod {method}:", method_counts[method])
-    print(f"{status_check_count} status check")
+        print("\tmethod {}: {}".format(
+                method, nginx.count_documents({'method': method})
+            )
+        )
+    print("{} status check".format(
+            nginx.count_documents({'method': 'GET', 'path': '/status'})
+        )
+    )
 
 
 if __name__ == "__main__":
