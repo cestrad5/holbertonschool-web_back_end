@@ -3,7 +3,6 @@
 school document based on the name"""
 
 
-def update_topics(mongo_collection, name, topics):
-    """changes all topics of a school document based on the name
-    """
-    mongo_collection.update_many({"name": name}, {"$set": {"topics": topics}})
+def schools_by_topic(mongo_collection, topic):
+    """returns the list of school having a specific topic"""
+    return mongo_collection.find({"topics": topic})
