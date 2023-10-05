@@ -3,7 +3,7 @@ function getResponseFromAPI() {
     // Simulate an asynchronous API response
     setTimeout(() => {
       resolve('API response received');
-    }, 3000); // Simulating a 2-second delay
+    }, 2000); // Simulating a 2-second delay
   });
 }
 
