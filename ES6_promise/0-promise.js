@@ -1,7 +1,7 @@
 export default function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
-    const rm = true;
-    if (rm) {
+    const check = true;
+    if (check) {
       resolve();
     } else {
       reject();
