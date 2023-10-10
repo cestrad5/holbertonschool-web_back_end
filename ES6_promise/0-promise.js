@@ -1,10 +1,12 @@
 // Return a Promise
 function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
-    if (resolve) {
+    const camilo = true;
+
+    if (camilo) {
       resolve();
     } else {
-      reject(Error());
+      reject();
     }
   });
 }
