@@ -1,14 +1,12 @@
 // Return a Promise
-function getResponseFromAPI() {
+export default function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
-    const camilo = true;
+    const camilo2 = true;
 
-    if (camilo) {
+    if (camilo2) {
       resolve();
     } else {
       reject();
     }
   });
 }
-
-export default getResponseFromAPI;
