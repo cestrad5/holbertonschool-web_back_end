@@ -1,20 +1,9 @@
-function cleanSet(set, startString) {
-  if (
-    startString === '' ||
-    startString === null ||
-    typeof startString !== 'string'
-  ) {
-    return '';
-  }
-
-  const result = [...set]
-    .filter(
-      (value) => typeof value === 'string' && value.startsWith(startString)
-    )
-    .map((value) => value.slice(startString.length))
-    .join('-');
-
-  return result;
+export default function cleanSet(set, startString) {
+  let result = '';
+  if (!startString || !startString.length) return result;
+  set.forEach((i) => {
+    if (i && i.startsWith(startString))
+      result += `${i.slice(startString.length)}-`;
+  });
+  return result.slice(0, result.length - 1);
 }
-
-export default cleanSet;
